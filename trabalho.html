@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Git e GitHub</title>
+    <link rel="stylesheet" href="estilo do trabalho.css"> <!-- Arquivo CSS externo -->
+
+</head>
+<body>
+    <header>
+        <h1>Introdução ao Git e GitHub</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#conta-configuracao">Criando uma Conta e Configurando</a></li>
+            <li><a href="#repositorios">Repositórios</a></li>
+            <li><a href="#clonando">Clonando Repositórios</a></li>
+            <li><a href="#comandos-basicos">Comandos Básicos</a></li>
+            <li><a href="#branches-merge">Branches e Merge</a></li>
+            <li><a href="#pull-requests">Contribuições e Pull Requests</a></li>
+            <li><a href="#issues-projetos">Issues e Projetos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="introducao">
+          
+           
+           <details>
+           <summary> <h2>1. O que é GitHub e qual é a sua principal funcionalidade?</h2> </summary>
+                
+            <p>GitHub é uma plataforma de hospedagem de código que permite que desenvolvedores colaborem em projetos de software. Sua principal funcionalidade é gerenciar repositórios Git, facilitando o versionamento de código e a colaboração entre equipes.</p>
+           
+            </details>
+            
+            <details>
+                <summary>   <h2>2. Quais são as diferenças entre Git e GitHub?</h2></summary>
+            <p>O Git é um sistema de controle de versão distribuído que permite o rastreamento de alterações no código-fonte durante o desenvolvimento. Já o GitHub é uma plataforma que hospeda repositórios Git na nuvem, oferecendo recursos adicionais como pull requests, issues, e integração contínua.</p>
+            </section>
+        
+        </section>
+
+        <section id="conta-configuracao">
+           
+                
+            <details><summary> <h2>3. Como criar uma conta no GitHub?</h2></summary> 
+            <p>Para criar uma conta no GitHub, acesse o site <a href="https://github.com" target="_blank">github.com</a> e siga as instruções de cadastro. Você precisará fornecer um endereço de e-mail válido, criar um nome de usuário e uma senha.</p>
+            </details>
+
+            <details>
+           <summary> <h2>4. Quais são os primeiros passos após a criação da conta no GitHub?</h2></summary>
+            <p>Após criar sua conta, você pode configurar seu perfil, criar seu primeiro repositório e conectar o GitHub ao seu computador usando Git.</p>
+            </details>
+            
+
+            <details><summary>
+            <h2>5. Como configurar o Git no seu computador local para se conectar ao GitHub?</h2></summary>
+            <p>Instale o Git no seu computador e configure suas credenciais de usuário utilizando os seguintes comandos:</p>
+          
+           
+           
+           <pre>
+                git config --global user.name "Seu Nome"
+                git config --global user.email "seuemail@example.com"
+            </pre> </details>
+        </section>
+
+        <section id="repositorios">
+
+            
+            <details>
+           <summary> <h2>6. O que é um repositório no GitHub?</h2></summary>
+            <p>Um repositório no GitHub é um local onde todo o código-fonte de um projeto, junto com o histórico de mudanças, é armazenado. Ele pode ser público ou privado.</p>
+            </details>
+
+            <details>
+           <summary>
+            <h2>7. Como criar um novo repositório no GitHub?</h2></summary>
+            <p>Após fazer login no GitHub, vá para a página de repositórios e clique em "New Repository". Dê um nome ao seu repositório, escolha se será público ou privado, e clique em "Create Repository".</p>
+            </details>
+
+
+            <details>
+           <summary>
+            <h2>8. Qual é a diferença entre um repositório público e um repositório privado?</h2></summary>
+            <p>Repositórios públicos são visíveis para qualquer pessoa na internet, enquanto repositórios privados só podem ser acessados por pessoas autorizadas.</p>
+        </section></details>
+
+
+
+
+        <section id="clonando">
+
+            <details>
+           <summary>
+            <h2>9. O que significa clonar um repositório e como isso é feito?</h2></summary>
+            <p>Clonar um repositório significa copiar um repositório Git de um servidor remoto (como o GitHub) para o seu computador local. Isso é feito com o comando <code>git clone URL</code>.</p>
+            </details>
+
+
+            <details>
+           <summary>
+            <h2>10. Qual é a utilidade de clonar um repositório?</h2></summary>
+            <p>Clonar um repositório permite que você trabalhe em um projeto localmente, com todo o histórico de commits e arquivos disponíveis em seu computador.</p>
+        </section>
+            </details>
+            
+
+            <details>
+            <summary>
+
+        <section id="comandos-basicos">
+            <h2>11. Quais são os principais comandos do Git que são usados com frequência?</h2></summary>
+            <ul>
+                <li><strong>git init</strong>: Inicializa um novo repositório Git.</li>
+                <li><strong>git clone</strong>: Clona um repositório existente.</li>
+                <li><strong>git add</strong>: Adiciona arquivos ao índice (staging area).</li>
+                <li><strong>git commit</strong>: Grava as mudanças no repositório local.</li>
+                <li><strong>git push</strong>: Envia as mudanças para o repositório remoto.</li>
+                <li><strong>git pull</strong>: Puxa as mudanças do repositório remoto para o local.</li>
+            </ul>
+            </details>
+
+<section>
+            <details>
+           <summary>
+
+            <h2>12. Como fazer commits e qual a importância de uma mensagem de commit clara e descritiva?</h2></summary>
+            <p>Fazer commits com mensagens claras e descritivas é importante para o entendimento do histórico de mudanças em um projeto. Use o comando <code>git commit -m "Sua mensagem de commit"</code> para realizar um commit.</p>
+        
+       </details>
+    </section> 
+
+        <details>
+        <summary>
+        <section id="branches-merge">
+            <h2>13. O que são branches e como criar uma nova branch no GitHub?</h2></summary>
+            <p>Branches são ramificações do repositório principal, usadas para desenvolver funcionalidades isoladamente. Crie uma nova branch com o comando <code>git branch nome-da-branch</code> e alterne para ela com <code>git checkout nome-da-branch</code>.</p>
+            </details>
+
+<section>
+            <details>
+            <summary>
+            <h2>14. Como fazer merge de branches e quais são as boas práticas para isso?</h2></summary>
+            <p>Para fazer merge de branches, use o comando <code>git merge nome-da-branch</code> na branch que você deseja unir. É uma boa prática revisar os conflitos antes de fazer o merge.</p>
+            </details></section>
+
+            
+            <details> <summary>
+        <section id="pull-requests">
+            <h2>15. Como fazer um fork de um repositório?</h2></summary>
+            <p>Forkar um repositório significa criar uma cópia dele na sua conta do GitHub. Isso permite que você faça alterações sem afetar o repositório original. Use a opção "Fork" no GitHub para isso.</p>
+            </details>
+
+<section>
+            <details><summary>
+            <h2>16. O que é um pull request e como criar um pull request?</h2></summary>
+            <p>Um pull request é uma solicitação para que as mudanças feitas em um fork ou branch sejam integradas ao repositório principal. Crie um pull request no GitHub após fazer push das suas alterações.</p>
+            </details> 
+</section>
+
+
+<section>
+            <details>
+          <summary>  <h2>17. Como revisar e aceitar um pull request?</h2></summary>
+            <p>O revisor deve analisar o código, testar as mudanças e, se tudo estiver correto, aceitar o pull request para que as mudanças sejam mescladas no repositório principal.</p>
+        </section>
+            </details>
+
+<details><summary>
+        <section id="issues-projetos">
+            <h2>18. O que são issues e como abrir uma issue no GitHub?</h2></summary>
+            <p>Issues são relatórios de problemas ou sugestões de melhorias em um projeto. Para abrir uma issue, vá à aba "Issues" de um repositório no GitHub e clique em "New Issue".</p>
+        </details> 
+
+<section>
+        <details> <summary>
+            <h2>19. Como usar o sistema de projetos do GitHub para gerenciar tarefas?</h2></summary>
+            <p>O GitHub oferece um sistema de gerenciamento de projetos onde você pode criar quadros Kanban para organizar e acompanhar o progresso das tarefas. Acesse a aba "Projects" e crie um novo projeto para começar.</p>
+        </section>
+                </details> 
+</section>
+
+    </main>
+
+    <footer>
+        <p>Portal desenvolvido por Arthur e Adão   Nº 04 e 01 - Colégio Estadual Francisco Carneiro Martins - 2024</p>
+    </footer>
+</body>
+</html>
